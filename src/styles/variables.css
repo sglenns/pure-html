@@ -1,0 +1,32 @@
+/** PALETTE https://coolors.co/264653-228176-e9c46a-994b0b-c53d1b */
+@layer theme {
+  :root {
+    --color-background: hsl(0, 0%, 0%);
+
+    --color-primary: hsl(197, 37%, 24%);
+    --color-primary-light: hsl(197, 37%, 34%);
+    --color-primary-dark: hsl(43, 74%, 56%);
+
+    --color-info: hsl(173, 58%, 32%);
+    --color-info-light: hsl(173, 58%, 42%);
+    --color-info-dark: hsl(173, 58%, 22%);
+
+    --color-warning: hsl(27, 87%, 32%);
+    --color-warning-light: hsl(27, 87%, 42%);
+    --color-warning-dark: hsl(27, 87%, 22%);
+
+    --color-danger: hsl(12, 76%, 44%);
+    --color-danger-light: hsl(12, 76%, 54%);
+    --color-danger-dark: hsl(12, 76%, 34%);
+
+    --font-size-base: 16px;
+    --font-size-large: 1.5em;
+    --font-size-small: 0.875em;
+    --line-height: 1.5;
+    --font-family: sans-serif;
+
+    --border-radius: 4px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease-in-out;
+  }
+}

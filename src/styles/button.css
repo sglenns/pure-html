@@ -1,0 +1,63 @@
+@layer component {
+  button {
+    --main-color: var(--color-primary);
+    --main-color-hover: var(--color-primary-light);
+    --main-color-disabled: var(--color-primary-dark);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--main-color);
+    background-color: var(--main-color);
+    color: white;
+    &:hover {
+      background-color: var(--main-color-hover);
+      color: white;
+    }
+    &:disabled {
+      background-color: var(--main-color-disabled);
+    }
+
+    /** VARIANTS */
+    &[data-outline] {
+      border-color: var(--main-color);
+      background-color: white;
+      color: var(--main-color);
+      &:hover {
+        color: white;
+      }
+      &:disabled {
+        color: var(--main-color);
+      }
+    }
+
+    /** SIZES */
+    &[data-small] {
+      padding: 0.25em 0.5em;
+      font-size: 0.8em;
+    }
+    &[data-medium] {
+      padding: 0.5em 1em;
+      font-size: 1em;
+    }
+    &[data-large] {
+      padding: 0.75em 1.5em;
+      font-size: 1.2em;
+    }
+
+    /** COLORS */
+    &[data-info] {
+      --main-color: var(--color-info);
+      --main-color-hover: var(--color-info-light);
+      --main-color-disabled: var(--color-info-dark);
+    }
+    &[data-warning] {
+      --main-color: var(--color-warning);
+      --main-color-hover: var(--color-warning-light);
+      --main-color-disabled: var(--color-warning-dark);
+    }
+    &[data-danger] {
+      --main-color: var(--color-danger);
+      --main-color-hover: var(--color-danger-light);
+      --main-color-disabled: var(--color-danger-dark);
+    }
+  }
+}
