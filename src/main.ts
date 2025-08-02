@@ -1,3 +1,3 @@
-import "@/scripts/dialog";
+import '@/scripts/dialog'
 
-import "@/styles/index.css";
+import '@/styles/index.css'

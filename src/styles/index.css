@@ -1,7 +1,7 @@
-@import "./variables.css";
-@import "./normalize.css";
-@import "./button.css";
-@import "./dialog.css";
+@import './variables.css';
+@import './normalize.css';
+@import './button.css';
+@import './dialog.css';
 @layer theme, reset, base, component, utility;
 
 @layer base {
