@@ -10,6 +10,7 @@
     "type-check": "tsc",
     "lint": "eslint . --fix",
     "lint:staged": "lint-staged",
+    "format:full": "prettier --write ./",
     "format": "prettier --write src/"
   },
   "devDependencies": {
