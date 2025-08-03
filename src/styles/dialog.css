@@ -2,9 +2,10 @@
   dialog {
     border: 0;
     border-radius: 0.25rem;
-    &::backdrop {
-      opacity: 0.75;
-      background-color: var(--color-background);
-    }
+  }
+
+  dialog::backdrop {
+    opacity: 0.75;
+    background-color: var(--color-background);
   }
 }

@@ -9,14 +9,16 @@
   }
 
   /* 2. Remove default margin */
-  *:not(dialog) {
+  *:not(dialog, [popover]) {
     margin: 0;
   }
 
   /* 3. Enable keyword animations */
   @media (prefers-reduced-motion: no-preference) {
-    html {
-      interpolate-size: allow-keywords;
+    @supports (interpolate-size: allow-keywords) {
+      html {
+        interpolate-size: allow-keywords;
+      }
     }
   }
 
@@ -57,16 +59,21 @@
   }
 
   /* 9. Improve line wrapping */
-  p {
-    text-wrap: pretty;
+  @supports (text-wrap: pretty) {
+    p {
+      text-wrap: pretty;
+    }
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-wrap: balance;
+
+  @supports (text-wrap: balance) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-wrap: balance;
+    }
   }
 
   /*

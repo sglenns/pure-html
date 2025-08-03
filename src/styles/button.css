@@ -8,56 +8,65 @@
     border-color: var(--main-color);
     background-color: var(--main-color);
     color: white;
-    &:hover {
-      background-color: var(--main-color-hover);
-      color: white;
-    }
-    &:disabled {
-      background-color: var(--main-color-disabled);
-    }
+    text-transform: uppercase;
+  }
 
-    /** VARIANTS */
-    &[data-outline] {
-      border-color: var(--main-color);
-      background-color: white;
-      color: var(--main-color);
-      &:hover {
-        color: white;
-      }
-      &:disabled {
-        color: var(--main-color);
-      }
-    }
+  button:hover {
+    background-color: var(--main-color-hover);
+    color: white;
+  }
 
-    /** SIZES */
-    &[data-small] {
-      padding: 0.25em 0.5em;
-      font-size: 0.8em;
-    }
-    &[data-medium] {
-      padding: 0.5em 1em;
-      font-size: 1em;
-    }
-    &[data-large] {
-      padding: 0.75em 1.5em;
-      font-size: 1.2em;
-    }
+  button:disabled {
+    background-color: var(--main-color-disabled);
+  }
 
-    /** COLORS */
-    &[data-info] {
-      --main-color: var(--color-info);
-      --main-color-hover: var(--color-info-light);
-      --main-color-disabled: var(--color-info-dark);
-    }
-    &[data-warning] {
-      --main-color: var(--color-warning);
-      --main-color-hover: var(--color-warning-light);
-      --main-color-disabled: var(--color-warning-dark);
-    }
-    &[data-danger] {
-      --main-color: var(--color-danger);
-      --main-color-hover: var(--color-danger-light);
-      --main-color-disabled: var(--color-danger-dark);
-    }
+  /** VARIANTS */
+  button[data-outline] {
+    border-color: var(--main-color);
+    background-color: white;
+    color: var(--main-color);
+  }
+
+  button:hover {
+    color: white;
+  }
+
+  button:disabled {
+    color: var(--main-color);
+  }
+
+  /** SIZES */
+  button[data-small] {
+    padding: 0.25em 0.5em;
+    font-size: 0.8em;
+  }
+
+  button[data-medium] {
+    padding: 0.5em 1em;
+    font-size: 1em;
+  }
+
+  button[data-large] {
+    padding: 0.75em 1.5em;
+    font-size: 1.2em;
+  }
+
+  /** COLORS */
+  button[data-info] {
+    --main-color: var(--color-info);
+    --main-color-hover: var(--color-info-light);
+    --main-color-disabled: var(--color-info-dark);
+  }
+
+  button[data-warning] {
+    --main-color: var(--color-warning);
+    --main-color-hover: var(--color-warning-light);
+    --main-color-disabled: var(--color-warning-dark);
+  }
+
+  button[data-danger] {
+    --main-color: var(--color-danger);
+    --main-color-hover: var(--color-danger-light);
+    --main-color-disabled: var(--color-danger-dark);
   }
 }

@@ -28,10 +28,10 @@ export default defineConfig([
     languageOptions: { tolerant: true },
     extends: ['css/recommended'],
     rules: {
-      'css/no-invalid-at-rules': 'warn',
-      'css/use-baseline': 'warn',
-      'css/no-invalid-properties': 'warn',
-      'css/no-empty-blocks': 'warn',
+      'css/no-invalid-at-rules': 'error',
+      'css/use-baseline': ['error', { available: 'widely' }],
+      'css/no-invalid-properties': ['error', { allowUnknownVariables: true }],
+      'css/no-empty-blocks': 'error',
     },
   },
 ])
