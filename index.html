@@ -21,28 +21,78 @@
       Content
     </h1>
     <section>
-      <header>
-        <h2>
-          Components
-        </h2>
-      </header>
+      <h2>
+        Components
+      </h2>
       <article>
         <h3>
-          dialog
+          <code>a</code>
         </h3>
-        <button type="button">
-          open dialog
-        </button>
-        <dialog>
-          <form action="" method="dialog">
-            <button type="reset">
-              chiudi
-            </button>
-            <button type="submit">
-              continua
-            </button>
-          </form>
-        </dialog>
+        <section class="demo">
+          <ul>
+            <li>
+              <a href="#base" target="_blank" rel="noopener noreferrer">base link</a>
+            </li>
+            <li>
+              <a href="#info" target="_blank" rel="noopener noreferrer" data-info>info link</a>
+            </li>
+            <li>
+              <a href="#warning" target="_blank" rel="noopener noreferrer" data-warning>warning link</a>
+            </li>
+            <li>
+              <a href="#danger" target="_blank" rel="noopener noreferrer" data-danger>danger link</a>
+            </li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <h3>
+          <code>button</code>
+        </h3>
+        <section class="demo">
+          <h4>variants</h4>
+          <button>normal button</button>
+          <button data-outline>outline button</button>
+          <h4>sizes</h4>
+          <button data-small>small button</button>
+          <button>normal button</button>
+          <button data-large>large button</button>
+          <h4>colors</h4>
+          <button>base button</button>
+          <button data-info>info button</button>
+          <button data-warning>warning button</button>
+          <button data-danger>danger button</button>
+        </section>
+      </article>
+      <article>
+        <h3>
+          <code>dialog</code>
+        </h3>
+        <section class="demo">
+          <button type="button">
+            open dialog
+          </button>
+          <dialog>
+            <form action="" method="dialog">
+              <button type="reset">
+                chiudi
+              </button>
+              <button type="submit">
+                continua
+              </button>
+            </form>
+          </dialog>
+        </section>
+      </article>
+      <article>
+        <h3>
+          <code>popover</code>
+        </h3>
+        <section class="demo">
+          <button commandfor="mypopover" command="show-popover">Show popover</button>
+          <button commandfor="mypopover" command="hide-popover">Hide popover</button>
+          <div id="mypopover" popover>Popover content</div>
+        </section>
       </article>
     </section>
     <section>

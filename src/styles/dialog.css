@@ -1,17 +1,17 @@
 @layer component {
-  dialog:open {
-    opacity: 1;
-  }
-
   dialog {
     opacity: 0;
     border: 0;
   }
 
   @starting-style {
-    dialog:open {
+    dialog {
       opacity: 0;
     }
+  }
+
+  dialog:open {
+    opacity: 1;
   }
 
   dialog::backdrop {

@@ -9,9 +9,9 @@
   }
 
   /* 2. Remove default margin */
-  *:not(dialog, [popover]) {
+  /* *:not(dialog, [popover]) {
     margin: 0;
-  }
+  } */
 
   /* 3. Enable keyword animations */
   @media (prefers-reduced-motion: no-preference) {

@@ -1,11 +1,16 @@
 /** PALETTE https://coolors.co/264653-228176-e9c46a-994b0b-c53d1b */
 @layer theme {
   :root {
-    --color-background: hsl(0, 0%, 96%);
-    --color-text: hsl(0, 0%, 20%);
+    --color-background-light: hsl(0, 0%, 96%);
+    --color-text-light: hsl(0, 0%, 20%);
 
     --color-background-dark: hsl(0, 0%, 20%);
     --color-text-dark: hsl(0, 0%, 96%);
+
+    --color-background: var(--color-background-light);
+    --color-text: var(--color-text-light);
+    --color-background-inverted: var(--color-background-dark);
+    --color-text-inverted: var(--color-text-dark);
 
     --color-primary: hsl(197, 37%, 24%);
     --color-primary-light: hsl(197, 37%, 34%);
@@ -29,9 +34,21 @@
     --line-height: 1.5;
     --font-family: sans-serif;
 
-    --spacing: 1rem;
-    --border-radius: 0.25rem;
-    --box-shadow: 0 0.125rem 0.25rem var(--color-background-dark);
+    --sizing-xs: 0.125rem;
+    --sizing-sm: 0.25rem;
+    --sizing: 1rem;
+    --sizing-lg: 1.25rem;
+    --sizing-xl: 1.75rem;
+
+    --box-shadow: 0 var(--sizing-xs) var(--sizing-sm) var(--color-background-inverted);
+
+    --border-radius: var(--sizing-sm);
+
+    --outline-color: var(--color-background-inverted);
+    --outline-style: solid;
+    --outline-width: var(--sizing-xs);
+    --outline-offset: var(--sizing-xs);
+
     --transition-duration: 0.3s;
     --transition-timing-function: ease-in-out;
   }

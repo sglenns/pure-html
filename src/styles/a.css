@@ -15,19 +15,19 @@
   }
 
   /** COLORS */
-  a.info {
+  a[data-info] {
     --main-color: var(--color-info);
     --main-color-hover: var(--color-info-light);
     --main-color-visited: var(--color-info-dark);
   }
 
-  a.warning {
+  a[data-warning] {
     --main-color: var(--color-warning);
     --main-color-hover: var(--color-warning-light);
     --main-color-visited: var(--color-warning-dark);
   }
 
-  a.danger {
+  a[data-danger] {
     --main-color: var(--color-danger);
     --main-color-hover: var(--color-danger-light);
     --main-color-visited: var(--color-danger-dark);

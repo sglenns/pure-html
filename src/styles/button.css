@@ -7,7 +7,9 @@
     border-style: solid;
     border-color: var(--main-color);
     background-color: var(--main-color);
+    padding: 0.5em 1em;
     color: white;
+    font-size: 1em;
     text-transform: uppercase;
   }
 
@@ -27,6 +29,11 @@
     color: var(--main-color);
   }
 
+  button[data-outline]:hover {
+    background-color: var(--main-color-hover);
+    color: white;
+  }
+
   button:hover {
     color: white;
   }
@@ -39,11 +46,6 @@
   button[data-small] {
     padding: 0.25em 0.5em;
     font-size: 0.8em;
-  }
-
-  button[data-medium] {
-    padding: 0.5em 1em;
-    font-size: 1em;
   }
 
   button[data-large] {
