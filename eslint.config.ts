@@ -1,10 +1,9 @@
+import css from '@eslint/css'
 import js from '@eslint/js'
+import eslintConfigPrettier from 'eslint-config-prettier/flat'
+import { defineConfig, globalIgnores } from 'eslint/config'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
-import markdown from '@eslint/markdown'
-import css from '@eslint/css'
-import { defineConfig, globalIgnores } from 'eslint/config'
-import eslintConfigPrettier from 'eslint-config-prettier/flat'
 
 export default defineConfig([
   globalIgnores(['dist/**/*']),
@@ -15,12 +14,6 @@ export default defineConfig([
     plugins: { js },
     extends: ['js/recommended'],
     languageOptions: { globals: globals.browser },
-  },
-  {
-    files: ['**/*.md'],
-    plugins: { markdown },
-    language: 'markdown/commonmark',
-    extends: ['markdown/recommended'],
   },
   {
     files: ['**/*.css'],
