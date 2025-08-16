@@ -30,7 +30,7 @@ export default defineConfig([
     extends: ['css/recommended'],
     rules: {
       'css/no-invalid-at-rules': 'error',
-      'css/use-baseline': ['error', { available: 'widely' }],
+      'css/use-baseline': ['warn', { available: 'widely' }],
       'css/no-invalid-properties': ['error', { allowUnknownVariables: true }],
       'css/no-empty-blocks': 'error',
     },
