@@ -1,32 +1,36 @@
 /** PALETTE https://coolors.co/264653-228176-e9c46a-994b0b-c53d1b */
 @layer theme {
   :root {
-    --color-background-light: hsl(0, 0%, 96%);
-    --color-text-light: hsl(0, 0%, 20%);
+    color-scheme: light dark;
+    --color-background-light: oklch(0.9 0 0);
+    --color-text-light: color-cotrast(var(--color-background-light));
 
-    --color-background-dark: hsl(0, 0%, 20%);
-    --color-text-dark: hsl(0, 0%, 96%);
+    --color-background-dark: oklch(0.3 0 0);
+    --color-text-dark: color-cotrast(var(--color-background-dark));
 
-    --color-background: var(--color-background-light);
-    --color-text: var(--color-text-light);
-    --color-background-inverted: var(--color-background-dark);
-    --color-text-inverted: var(--color-text-dark);
+    --color-background: light-dark(
+      var(--color-background-light),
+      var(--color-background-dark)
+    );
+    --color-text: light-dark(var(--color-text-light), var(--color-text-dark));
+    --color-background-inverted: light-dark(
+      var(--color-background-dark),
+      var(--color-background-light)
+    );
+    --color-text-inverted: light-dark(
+      var(--color-text-dark),
+      var(--color-text-light)
+    );
 
-    --color-primary: hsl(197, 37%, 24%);
-    --color-primary-light: hsl(197, 37%, 34%);
-    --color-primary-dark: hsl(43, 74%, 56%);
+    --color-primary: oklch(0.6 0.2 250);
+    --color-success: oklch(0.7 0.15 140);
+    --color-info: oklch(77.907% 0.12631 183.314);
+    --color-warning: oklch(0.7 0.15 90);
+    --color-danger: oklch(0.7 0.15 30);
 
-    --color-info: hsl(173, 58%, 32%);
-    --color-info-light: hsl(173, 58%, 42%);
-    --color-info-dark: hsl(173, 58%, 22%);
-
-    --color-warning: hsl(27, 87%, 32%);
-    --color-warning-light: hsl(27, 87%, 42%);
-    --color-warning-dark: hsl(27, 87%, 22%);
-
-    --color-danger: hsl(12, 76%, 44%);
-    --color-danger-light: hsl(12, 76%, 54%);
-    --color-danger-dark: hsl(12, 76%, 34%);
+    --color-main: var(--color-primary);
+    --color-main-light: oklch(from var(--color-main) calc(l + 0.0625) c h);
+    --color-main-dark: oklch(from var(--color-main) calc(l + 0.0625) c h);
 
     --font-size-base: 1rem;
     --font-size-large: 1.5rem;

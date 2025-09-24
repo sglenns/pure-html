@@ -51,17 +51,18 @@
         </h3>
         <section class="demo">
           <h4>variants</h4>
-          <button>normal button</button>
-          <button data-outline>outline button</button>
+          <button type="button">normal button</button>
+          <button type="button" data-outline>outline button</button>
           <h4>sizes</h4>
-          <button data-small>small button</button>
-          <button>normal button</button>
-          <button data-large>large button</button>
+          <button type="button" data-small>small button</button>
+          <button type="button">normal button</button>
+          <button type="button" data-large>large button</button>
           <h4>colors</h4>
-          <button>base button</button>
-          <button data-info>info button</button>
-          <button data-warning>warning button</button>
-          <button data-danger>danger button</button>
+          <button type="button">base button</button>
+          <button type="button" data-success>success button</button>
+          <button type="button" data-info>info button</button>
+          <button type="button" data-warning>warning button</button>
+          <button type="button" data-danger>danger button</button>
         </section>
       </article>
       <article>
@@ -69,15 +70,15 @@
           <code>dialog</code>
         </h3>
         <section class="demo">
-          <button type="button">
+          <button type="button" type="button">
             open dialog
           </button>
           <dialog>
             <form action="" method="dialog">
-              <button type="reset">
+              <button type="button" type="reset">
                 chiudi
               </button>
-              <button type="submit">
+              <button type="button" type="submit">
                 continua
               </button>
             </form>
@@ -89,8 +90,8 @@
           <code>popover</code>
         </h3>
         <section class="demo">
-          <button commandfor="mypopover" command="show-popover">Show popover</button>
-          <button commandfor="mypopover" command="hide-popover">Hide popover</button>
+          <button type="button" commandfor="mypopover" command="show-popover">Show popover</button>
+          <button type="button" commandfor="mypopover" command="hide-popover">Hide popover</button>
           <div id="mypopover" popover>Popover content</div>
         </section>
       </article>
