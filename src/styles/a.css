@@ -1,35 +1,29 @@
 @layer component {
   a {
-    --main-color: var(--color-primary);
-    --main-color-hover: var(--color-primary-light);
-    --main-color-visited: var(--color-primary-dark);
+    --main-color: var(--color-main);
+    --main-color-hover: oklch(from var(--main-color) calc(l + 0.125) c h);
+    --main-color-visited: oklch(from var(--main-color) calc(l - 0.125) c h);
     color: var(--main-color);
-  }
 
-  a:hover {
-    color: var(--main-color-hover);
-  }
+    &:hover {
+      color: var(--main-color-hover);
+    }
 
-  a:visited {
-    color: var(--main-color-visited);
+    &:visited {
+      color: var(--main-color-visited);
+    }
   }
 
   /** COLORS */
   a[data-info] {
     --main-color: var(--color-info);
-    --main-color-hover: var(--color-info-light);
-    --main-color-visited: var(--color-info-dark);
   }
 
   a[data-warning] {
     --main-color: var(--color-warning);
-    --main-color-hover: var(--color-warning-light);
-    --main-color-visited: var(--color-warning-dark);
   }
 
   a[data-danger] {
     --main-color: var(--color-danger);
-    --main-color-hover: var(--color-danger-light);
-    --main-color-visited: var(--color-danger-dark);
   }
 }

@@ -1,25 +1,24 @@
 @layer component {
   button {
-    --main-color: var(--color-primary);
-    --main-color-hover: var(--color-primary-light);
-    --main-color-disabled: var(--color-primary-dark);
+    --main-color: var(--color-main);
+    --main-color-hover: oklch(from var(--main-color) calc(l + 0.125) c h);
+    --main-color-disabled: oklch(from var(--main-color) calc(l - 0.125) c h);
     border-width: 1px;
     border-style: solid;
     border-color: var(--main-color);
     background-color: var(--main-color);
     padding: 0.5em 1em;
-    color: white;
+    color: color-contrast(var(--main-color));
     font-size: 1em;
     text-transform: uppercase;
-  }
 
-  button:hover {
-    background-color: var(--main-color-hover);
-    color: white;
-  }
+    &:hover {
+      background-color: var(--main-color-hover);
+    }
 
-  button:disabled {
-    background-color: var(--main-color-disabled);
+    &:disabled {
+      background-color: var(--main-color-disabled);
+    }
   }
 
   /** VARIANTS */
@@ -31,15 +30,7 @@
 
   button[data-outline]:hover {
     background-color: var(--main-color-hover);
-    color: white;
-  }
-
-  button:hover {
-    color: white;
-  }
-
-  button:disabled {
-    color: var(--main-color);
+    color: color-contrast(var(--main-color-hover));
   }
 
   /** SIZES */
@@ -56,19 +47,17 @@
   /** COLORS */
   button[data-info] {
     --main-color: var(--color-info);
-    --main-color-hover: var(--color-info-light);
-    --main-color-disabled: var(--color-info-dark);
+  }
+
+  button[data-success] {
+    --main-color: var(--color-success);
   }
 
   button[data-warning] {
     --main-color: var(--color-warning);
-    --main-color-hover: var(--color-warning-light);
-    --main-color-disabled: var(--color-warning-dark);
   }
 
   button[data-danger] {
     --main-color: var(--color-danger);
-    --main-color-hover: var(--color-danger-light);
-    --main-color-disabled: var(--color-danger-dark);
   }
 }
