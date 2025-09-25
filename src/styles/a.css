@@ -1,29 +1,16 @@
 @layer component {
   a {
     --main-color: var(--color-main);
-    --main-color-hover: oklch(from var(--main-color) calc(l + 0.125) c h);
-    --main-color-visited: oklch(from var(--main-color) calc(l - 0.125) c h);
+    --main-color-hover: oklch(from var(--main-color) calc(l + 0.25) c h);
+    --main-color-visited: oklch(from var(--main-color) calc(l + 0.0625) c h);
     color: var(--main-color);
-
-    &:hover {
-      color: var(--main-color-hover);
-    }
 
     &:visited {
       color: var(--main-color-visited);
     }
-  }
 
-  /** COLORS */
-  a[data-info] {
-    --main-color: var(--color-info);
-  }
-
-  a[data-warning] {
-    --main-color: var(--color-warning);
-  }
-
-  a[data-error] {
-    --main-color: var(--color-error);
+    &:hover {
+      color: var(--main-color-hover);
+    }
   }
 }
