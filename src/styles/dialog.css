@@ -16,6 +16,6 @@
 
   dialog::backdrop {
     opacity: 0.75;
-    background-color: var(--color-background-dark);
+    background-color: var(--color-base);
   }
 }

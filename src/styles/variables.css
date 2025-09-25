@@ -1,36 +1,60 @@
-/** PALETTE https://coolors.co/264653-228176-e9c46a-994b0b-c53d1b */
+/** PALETTE https://daisyui.com/ */
 @layer theme {
   :root {
     color-scheme: light dark;
-    --color-background-light: oklch(0.9 0 0);
-    --color-text-light: color-cotrast(var(--color-background-light));
 
-    --color-background-dark: oklch(0.3 0 0);
-    --color-text-dark: color-cotrast(var(--color-background-dark));
-
-    --color-background: light-dark(
-      var(--color-background-light),
-      var(--color-background-dark)
+    --color-base: light-dark(oklch(98% 0.02 240), oklch(25.33% 0.016 252.42));
+    --color-base-content: light-dark(
+      oklch(20% 0.05 240),
+      oklch(97.807% 0.029 256.847)
     );
-    --color-text: light-dark(var(--color-text-light), var(--color-text-dark));
-    --color-background-inverted: light-dark(
-      var(--color-background-dark),
-      var(--color-background-light)
+    --color-primary: light-dark(oklch(55% 0.3 240), oklch(58% 0.233 277.117));
+    --color-primary-content: light-dark(
+      oklch(98% 0.01 240),
+      oklch(96% 0.018 272.314)
     );
-    --color-text-inverted: light-dark(
-      var(--color-text-dark),
-      var(--color-text-light)
+    --color-secondary: light-dark(
+      oklch(70% 0.25 200),
+      oklch(65% 0.241 354.308)
     );
-
-    --color-primary: oklch(0.6 0.2 250);
-    --color-success: oklch(0.7 0.15 140);
-    --color-info: oklch(77.907% 0.12631 183.314);
-    --color-warning: oklch(0.7 0.15 90);
-    --color-danger: oklch(0.7 0.15 30);
+    --color-secondary-content: light-dark(
+      oklch(98% 0.01, oklch(94% 0.028 342.258)) 200
+    );
+    --color-accent: light-dark(oklch(65% 0.25 160), oklch(77% 0.152 181.912));
+    --color-accent-content: light-dark(
+      oklch(98% 0.01 160),
+      oklch(38% 0.063 188.416)
+    );
+    --color-neutral: light-dark(oklch(50% 0.05 240), oklch(14% 0.005 285.823));
+    --color-neutral-content: light-dark(
+      oklch(98% 0.01 240),
+      oklch(92% 0.004 286.32)
+    );
+    --color-info: light-dark(oklch(70% 0.2 220), oklch(74% 0.16 232.661));
+    --color-info-content: light-dark(
+      oklch(98% 0.01 220),
+      oklch(29% 0.066 243.157)
+    );
+    --color-success: light-dark(oklch(65% 0.25 140), oklch(76% 0.177 163.223));
+    --color-success-content: light-dark(
+      oklch(98% 0.01 140),
+      oklch(37% 0.077 168.94)
+    );
+    --color-warning: light-dark(oklch(80% 0.25 80), oklch(82% 0.189 84.429));
+    --color-warning-content: light-dark(
+      oklch(20% 0.05 80),
+      oklch(41% 0.112 45.904)
+    );
+    --color-error: light-dark(oklch(65% 0.3 30), oklch(71% 0.194 13.428));
+    --color-error-content: light-dark(
+      oklch(98% 0.01 30),
+      oklch(27% 0.105 12.094)
+    );
 
     --color-main: var(--color-primary);
+    --color-main-text: var(--color-primary-content);
     --color-main-light: oklch(from var(--color-main) calc(l + 0.0625) c h);
-    --color-main-dark: oklch(from var(--color-main) calc(l + 0.0625) c h);
+    --color-main-dark: oklch(from var(--color-main) calc(l - 0.0625) c h);
 
     --font-size-base: 1rem;
     --font-size-large: 1.5rem;

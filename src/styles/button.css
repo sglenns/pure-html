@@ -1,19 +1,21 @@
 @layer component {
   button {
     --main-color: var(--color-main);
-    --main-color-hover: oklch(from var(--main-color) calc(l + 0.125) c h);
-    --main-color-disabled: oklch(from var(--main-color) calc(l - 0.125) c h);
+    --main-text-color: var(--color-main-text);
+    --main-color-hover: oklch(from var(--main-color) calc(l + 0.0625) c h);
+    --main-color-disabled: oklch(from var(--main-color) calc(l - 0.0625) c h);
     border-width: 1px;
     border-style: solid;
     border-color: var(--main-color);
     background-color: var(--main-color);
     padding: 0.5em 1em;
-    color: color-contrast(var(--main-color));
+    color: var(--main-text-color);
     font-size: 1em;
     text-transform: uppercase;
 
     &:hover {
       background-color: var(--main-color-hover);
+      color: var(--main-text-color);
     }
 
     &:disabled {
@@ -24,13 +26,14 @@
   /** VARIANTS */
   button[data-outline] {
     border-color: var(--main-color);
-    background-color: white;
+    background-color: var(--main-text-color);
     color: var(--main-color);
   }
 
   button[data-outline]:hover {
+    border-color: var(--main-text-color);
     background-color: var(--main-color-hover);
-    color: color-contrast(var(--main-color-hover));
+    color: var(--main-text-color);
   }
 
   /** SIZES */
@@ -47,17 +50,21 @@
   /** COLORS */
   button[data-info] {
     --main-color: var(--color-info);
+    --main-text-color: var(--color-info-content);
   }
 
   button[data-success] {
     --main-color: var(--color-success);
+    --main-text-color: var(--color-success-content);
   }
 
   button[data-warning] {
     --main-color: var(--color-warning);
+    --main-text-color: var(--color-warning-content);
   }
 
-  button[data-danger] {
-    --main-color: var(--color-danger);
+  button[data-error] {
+    --main-color: var(--color-error);
+    --main-text-color: var(--color-error-content);
   }
 }

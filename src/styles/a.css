@@ -23,7 +23,7 @@
     --main-color: var(--color-warning);
   }
 
-  a[data-danger] {
-    --main-color: var(--color-danger);
+  a[data-error] {
+    --main-color: var(--color-error);
   }
 }
