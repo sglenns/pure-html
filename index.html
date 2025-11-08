@@ -15,9 +15,16 @@
     <h1>Page Title</h1>
     <p>Page description.</p>
     <nav>
-      <ul role="list">
+      <ul>
         <li>
-          <a href="#">Link</a>
+          <a href="#1">
+            Link 1
+          </a>
+        </li>
+        <li>
+          <a href="#2">
+            Link 2
+          </a>
         </li>
       </ul>
     </nav>
@@ -33,7 +40,9 @@
           <code>a</code>
         </h3>
         <section class="demo">
-          <a href="#link" target="_blank" rel="noopener noreferrer">link</a>
+          <a href="#link" target="_blank" rel="noopener noreferrer">
+            link
+          </a>
         </section>
       </article>
       <article>
@@ -55,10 +64,10 @@
           <dialog>
             <form action="" method="dialog">
               <button type="button" type="reset">
-                chiudi
+                close
               </button>
               <button type="button" type="submit">
-                continua
+                continue
               </button>
             </form>
           </dialog>
@@ -69,9 +78,15 @@
           <code>popover</code>
         </h3>
         <section class="demo">
-          <button type="button" commandfor="mypopover" command="show-popover">Show popover</button>
-          <button type="button" commandfor="mypopover" command="hide-popover">Hide popover</button>
-          <div id="mypopover" popover>Popover content</div>
+          <button type="button" commandfor="mypopover" command="show-popover" class="popover-button">
+            Show popover
+          </button>
+          <button type="button" commandfor="mypopover" command="hide-popover">
+            Hide popover
+          </button>
+          <div id="mypopover" class="popover" popover>
+            Popover content
+          </div>
         </section>
       </article>
     </section>

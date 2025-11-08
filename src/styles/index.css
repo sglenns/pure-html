@@ -1,3 +1,6 @@
+@import "../../node_modules/simpledotcss/simple.css";
+
+/*
 @import "./mcss.css";
 @import "./dialog.css";
 @import "./popover.css";
@@ -6,3 +9,8 @@
 @import "./variables.css";
 
 @layer config, resets, elements;
+*/
+
+body:has(dialog[open]) {
+    overflow: hidden;
+}
