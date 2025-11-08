@@ -1,21 +1,26 @@
-@layer component {
-  dialog {
+@layer reset {
+  body:has(dialog[open]) {
+    overflow: hidden;
+  }
+}
+
+@layer elements {
+  :where(dialog) {
     opacity: 0;
     border: 0;
   }
 
   @starting-style {
-    dialog {
+    :where(dialog) {
       opacity: 0;
     }
   }
 
-  dialog:open {
-    opacity: 1;
+  :where(dialog):open {
+    opacity: 100%;
   }
 
-  dialog::backdrop {
-    opacity: 0.75;
-    background-color: var(--color-base);
+  :where(dialog)::backdrop {
+    opacity: 75%;
   }
 }

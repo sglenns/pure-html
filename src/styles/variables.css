@@ -1,84 +1,51 @@
-/** PALETTE https://daisyui.com/ */
-@layer theme {
+@layer config {
   :root {
-    color-scheme: light dark;
+    --gutter: clamp(1rem, 2.5vmax, 1.5rem);
+    --stack: clamp(1.25ex, 2.5vmax, 1.75ex);
+    --paragraph-indent: calc(var(--gutter) / 1.25);
+    --line-length: 66ch;
+    --page-padding-inline: calc((100vi - min(var(--line-length), 80vi)) / 2);
+    --page-padding-block: calc(var(--stack) * 8);
+    --landmark-hr-size: 1ex;
+    --landmark-hr-margin-block: var(--page-padding-block);
+    --hr-size: 0.5ex;
+    --hr-margin-block: calc(var(--stack) * 4);
+    --border-image-source: gray, color-mix(in oklch, gray 40%, transparent),
+      color-mix(in oklch, gray 40%, transparent), gray;
+    --underline: solid;
+    --focus-outline: 2px solid crimson;
+    --focus-outline-offset: 2px;
+    --font: "Georgia", serif;
+    --font-variant: "Verdana", system-ui, sans-serif;
+    --font-mono: ui-monospace, sfmono-regular, sf mono, menlo, consolas,
+      liberation mono, monospace;
+    --font-size: clamp(95%, 80% + 0.5vi, 130%);
+    --leading: 1.475;
+    --pt-double-canon: clamp(3em, 2.5179em + 2.4107vi, 4.666em);
+    --pt-canon: clamp(2.5em, 2.2321em + 1.9643vi, 3.999em);
+    --pt-double-great-primer: clamp(2em, 1.7143em + 1.4286vi, 2.999em);
+    --pt-double-pica: clamp(1.65em, 1.3571em + 0.7143vi, 2em);
+    --pt-paragon: clamp(1.35em, 1.2054em + 0.5357vi, 1.666em);
+    --pt-english: 1.166em;
+    --pt-pica: 1em;
+    --pt-small-pica: 0.916em;
+    --pt-long-primer: 0.833em;
+    --pt-bourgeois: 0.75em;
+    font-family: var(--font);
+    font-size: var(--font-size);
+    line-height: var(--leading);
+    color-scheme: dark light;
+    accent-color: crimson;
+  }
 
-    --color-base: light-dark(oklch(98% 0.02 240), oklch(25.33% 0.016 252.42));
-    --color-base-content: light-dark(
-      oklch(20% 0.05 240),
-      oklch(97.807% 0.029 256.847)
-    );
-    --color-primary: light-dark(oklch(55% 0.3 240), oklch(58% 0.233 277.117));
-    --color-primary-content: light-dark(
-      oklch(98% 0.01 240),
-      oklch(96% 0.018 272.314)
-    );
-    --color-secondary: light-dark(
-      oklch(70% 0.25 200),
-      oklch(65% 0.241 354.308)
-    );
-    --color-secondary-content: light-dark(
-      oklch(98% 0.01, oklch(94% 0.028 342.258)) 200
-    );
-    --color-accent: light-dark(oklch(65% 0.25 160), oklch(77% 0.152 181.912));
-    --color-accent-content: light-dark(
-      oklch(98% 0.01 160),
-      oklch(38% 0.063 188.416)
-    );
-    --color-neutral: light-dark(oklch(50% 0.05 240), oklch(14% 0.005 285.823));
-    --color-neutral-content: light-dark(
-      oklch(98% 0.01 240),
-      oklch(92% 0.004 286.32)
-    );
-    --color-info: light-dark(oklch(70% 0.2 220), oklch(74% 0.16 232.661));
-    --color-info-content: light-dark(
-      oklch(98% 0.01 220),
-      oklch(29% 0.066 243.157)
-    );
-    --color-success: light-dark(oklch(65% 0.25 140), oklch(76% 0.177 163.223));
-    --color-success-content: light-dark(
-      oklch(98% 0.01 140),
-      oklch(37% 0.077 168.94)
-    );
-    --color-warning: light-dark(oklch(80% 0.25 80), oklch(82% 0.189 84.429));
-    --color-warning-content: light-dark(
-      oklch(20% 0.05 80),
-      oklch(41% 0.112 45.904)
-    );
-    --color-error: light-dark(oklch(65% 0.3 30), oklch(71% 0.194 13.428));
-    --color-error-content: light-dark(
-      oklch(98% 0.01 30),
-      oklch(27% 0.105 12.094)
-    );
-
-    --color-main: var(--color-primary);
-    --color-main-text: var(--color-primary-content);
-    --color-main-light: oklch(from var(--color-main) calc(l + 0.0625) c h);
-    --color-main-dark: oklch(from var(--color-main) calc(l - 0.0625) c h);
-
-    --font-size-base: 1rem;
-    --font-size-large: 1.5rem;
-    --font-size-small: 0.875rem;
-    --line-height: 1.5;
-    --font-family: sans-serif;
-
-    --sizing-xs: 0.125rem;
-    --sizing-sm: 0.25rem;
-    --sizing: 1rem;
-    --sizing-lg: 1.25rem;
-    --sizing-xl: 1.75rem;
-
-    --box-shadow: 0 var(--sizing-xs) var(--sizing-sm)
-      var(--color-background-inverted);
-
-    --border-radius: var(--sizing-sm);
-
-    --outline-color: var(--color-background-inverted);
-    --outline-style: solid;
-    --outline-width: var(--sizing-xs);
-    --outline-offset: var(--sizing-xs);
-
-    --transition-duration: 0.3s;
-    --transition-timing-function: ease-in-out;
+  [data-theme="verdana"] {
+    --landmark-hr-size: 2px;
+    --hr-size: 2px;
+    --landmark-hr-margin-block: calc(var(--stack) * 2);
+    --hr-margin-block: calc(var(--stack) * 1.5);
+    --font: "Verdana", system-ui, sans-serif;
+    --font-variant: var(--font);
+    --font-size: clamp(75%, 65% + 0.5vi, 100%);
+    --leading: 1.45;
   }
 }

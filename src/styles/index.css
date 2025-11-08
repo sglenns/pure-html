@@ -1,13 +1,8 @@
-@import "./variables.css";
-@import "./normalize.css";
-@import "./a.css";
-@import "./base.css";
-@import "./button.css";
+@import "./mcss.css";
 @import "./dialog.css";
-@import "./footer.css";
-@import "./header.css";
-@import "./main.css";
-@import "./section.css";
 @import "./popover.css";
+@import "./resets.css";
+@import "./skip-link.css";
+@import "./variables.css";
 
-@layer theme, reset, base, component, utility;
+@layer config, resets, elements;

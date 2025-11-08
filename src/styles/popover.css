@@ -1,5 +1,5 @@
-@layer components {
-  [popover] {
+@layer elements {
+  :where([popover]) {
     transform: scaleX(0);
     opacity: 0;
 
@@ -12,13 +12,13 @@
     font-size: 1.2rem;
   }
 
-  :popover-open {
+  :where(:popover-open) {
     transform: scaleX(100%);
     opacity: 1;
   }
 
   @starting-style {
-    :popover-open {
+    :where(:popover-open) {
       transform: scaleX(0);
       opacity: 0;
     }
