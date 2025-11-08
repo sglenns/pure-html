@@ -1,0 +1,63 @@
+@layer resets {
+
+    *,
+    ::before,
+    ::after {
+        font-feature-settings: "kern";
+        -webkit-font-kerning: normal;
+        font-kerning: normal;
+        box-sizing: border-box;
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+        *,
+        ::before,
+        ::after {
+            -moz-osx-font-smoothing: grayscale !important;
+            -webkit-font-smoothing: antialiased !important;
+        }
+    }
+
+    *:not(dialog, [popover]) {
+        margin: 0;
+        padding: 0;
+    }
+
+    input:is([type="checkbox"], [type="radio"]),
+    select,
+    label,
+    button {
+        cursor: pointer;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        font: inherit;
+    }
+
+    img,
+    svg,
+    video {
+        max-inline-size: 100%;
+        block-size: auto;
+    }
+
+    svg {
+        fill: currentcolor;
+    }
+
+    @media (forced-colors: active) {
+        button {
+            border: 1px solid;
+        }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        :root {
+            scroll-behavior: smooth;
+        }
+    }
+}
