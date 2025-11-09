@@ -143,7 +143,7 @@
           <h2>Asides</h2>
         </header>
         <aside>
-          <h4>This is an aside</h4>
+          <h3>This is an aside</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             cumque numquam natus harum delectus autem, ipsam veritatis
@@ -356,20 +356,20 @@
           </caption>
           <thead>
             <tr>
-              <th>Table Heading 1</th>
-              <th>Table Heading 2</th>
-              <th>Table Heading 3</th>
-              <th>Table Heading 4</th>
-              <th>Table Heading 5</th>
+              <th scope="col">Table Heading 1</th>
+              <th scope="col">Table Heading 2</th>
+              <th scope="col">Table Heading 3</th>
+              <th scope="col">Table Heading 4</th>
+              <th scope="col">Table Heading 5</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
-              <th>Table Footer 1</th>
-              <th>Table Footer 2</th>
-              <th>Table Footer 3</th>
-              <th>Table Footer 4</th>
-              <th>Table Footer 5</th>
+              <th scope="col">Table Footer 1</th>
+              <th scope="col">Table Footer 2</th>
+              <th scope="col">Table Footer 3</th>
+              <th scope="col">Table Footer 4</th>
+              <th scope="col">Table Footer 5</th>
             </tr>
           </tfoot>
           <tbody>
@@ -416,16 +416,16 @@
           </colgroup>
           <thead>
             <tr>
-              <th>Header_1</th>
-              <th>Header_2</th>
-              <th>Header_3</th>
-              <th>Header_4</th>
-              <th>Header_5</th>
-              <th>Header_6</th>
-              <th>Header_7</th>
-              <th>Header_8</th>
-              <th>Header_9</th>
-              <th>Header_10</th>
+              <th scope="col">Header_1</th>
+              <th scope="col">Header_2</th>
+              <th scope="col">Header_3</th>
+              <th scope="col">Header_4</th>
+              <th scope="col">Header_5</th>
+              <th scope="col">Header_6</th>
+              <th scope="col">Header_7</th>
+              <th scope="col">Header_8</th>
+              <th scope="col">Header_9</th>
+              <th scope="col">Header_10</th>
             </tr>
           </thead>
           <tbody>
@@ -517,16 +517,16 @@
             </colgroup>
             <thead>
               <tr>
-                <th>Header_1</th>
-                <th>Header_2</th>
-                <th>Header_3</th>
-                <th>Header_4</th>
-                <th>Header_5</th>
-                <th>Header_6</th>
-                <th>Header_7</th>
-                <th>Header_8</th>
-                <th>Header_9</th>
-                <th>Header_10</th>
+                <th scope="col">Header_1</th>
+                <th scope="col">Header_2</th>
+                <th scope="col">Header_3</th>
+                <th scope="col">Header_4</th>
+                <th scope="col">Header_5</th>
+                <th scope="col">Header_6</th>
+                <th scope="col">Header_7</th>
+                <th scope="col">Header_8</th>
+                <th scope="col">Header_9</th>
+                <th scope="col">Header_10</th>
               </tr>
             </thead>
             <tbody>
@@ -621,16 +621,16 @@
             </colgroup>
             <thead>
               <tr>
-                <th>Header_1</th>
-                <th>Header_2</th>
-                <th>Header_3</th>
-                <th>Header_4</th>
-                <th>Header_5</th>
-                <th>Header_6</th>
-                <th>Header_7</th>
-                <th>Header_8</th>
-                <th>Header_9</th>
-                <th>Header_10</th>
+                <th scope="col">Header_1</th>
+                <th scope="col">Header_2</th>
+                <th scope="col">Header_3</th>
+                <th scope="col">Header_4</th>
+                <th scope="col">Header_5</th>
+                <th scope="col">Header_6</th>
+                <th scope="col">Header_7</th>
+                <th scope="col">Header_8</th>
+                <th scope="col">Header_9</th>
+                <th scope="col">Header_10</th>
               </tr>
             </thead>
             <tbody>
@@ -898,7 +898,10 @@ P R E F O R M A T T E D T E X T
         <header>
           <h2>Video</h2>
         </header>
-        <video controls="">video</video>
+        <video controls="">
+          <track kind="captions">
+          </track>
+        </video>
         <footer>
           <p><a href="#top">[Top]</a></p>
         </footer>
@@ -948,7 +951,7 @@ P R E F O R M A T T E D T E X T
         <header>
           <h2>IFrame</h2>
         </header>
-        <iframe src="index.html" height="300"></iframe>
+        <iframe src="index.html" height="300" title="iframe"></iframe>
         <footer>
           <p><a href="#top">[Top]</a></p>
         </footer>
@@ -966,7 +969,7 @@ P R E F O R M A T T E D T E X T
         <header>
           <h2>Object</h2>
         </header>
-        <object data="index.html" height="300"></object>
+        <object data="index.html" height="300" alt="object"></object>
         <footer>
           <p><a href="#top">[Top]</a></p>
         </footer>
