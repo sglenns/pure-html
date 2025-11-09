@@ -2,8 +2,10 @@
 @import "./popover.css";
 @import "./skip-link.css";
 
+/*
 body:has(dialog[open]) {
-    overflow-y: hidden;
-    padding-right: 1rem;
-    scrollbar-gutter: stable;
+  padding-right: 1rem;
+  overflow-y: hidden;
+  scrollbar-gutter: stable;
 }
+*/
