@@ -16,7 +16,7 @@ export default defineConfig([
     extends: ["markdown/recommended"],
     language: "markdown/gfm",
     rules: {
-      "markdown/no-html": "error",
+      "markdown/no-html": ["error"],
     },
   },
   {
@@ -32,10 +32,10 @@ export default defineConfig([
     languageOptions: { tolerant: true },
     extends: ["css/recommended"],
     rules: {
-      "css/no-invalid-at-rules": "error",
+      "css/no-invalid-at-rules":[ "error"],
       "css/use-baseline": ["warn", { available: "widely" }],
       "css/no-invalid-properties": ["error", { allowUnknownVariables: true }],
-      "css/no-empty-blocks": "error",
+      "css/no-empty-blocks":[ "error"],
     },
   },
 ]);
