@@ -23,4 +23,14 @@
       opacity: 0;
     }
   }
+
+  :where([popovertarget="popover-demo"]) {
+    anchor-name: --anchor-el;
+  }
+
+  :where(#popover-demo) {
+    position-anchor: --anchor-el;
+    top: anchor(bottom);
+
+  }
 }
