@@ -1,0 +1,29 @@
+name: CodSpeed Benchmarks
+
+on:
+    push:
+        branches:
+            - "main" # or "master"
+    pull_request:
+    # `workflow_dispatch` allows CodSpeed to trigger backtest
+    # performance analysis in order to generate initial data.
+    workflow_dispatch:
+
+jobs:
+    benchmarks:
+        name: Run benchmarks
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                shard: ["1/5", "2/5", "3/5", "4/5", "5/5"]
+        steps:
+            - uses: actions/checkout@v5
+            - uses: actions/setup-node@v6
+            - name: Install dependencies
+              run: npm install
+            - name: Run the benchmarks
+              uses: CodSpeedHQ/action@v4
+              with:
+                  mode: instrumentation
+                  run: npm exec vitest bench --run --shard=${{ matrix.shard }}
+                  token: ${{ secrets.CODSPEED_TOKEN }} # optional for public repos
