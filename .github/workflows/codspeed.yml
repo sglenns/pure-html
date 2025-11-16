@@ -16,9 +16,6 @@ jobs:
     benchmarks:
         name: Run benchmarks
         runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                shard: ["1/5", "2/5", "3/5", "4/5", "5/5"]
         steps:
             - uses: actions/checkout@v5
             - uses: actions/setup-node@v6
@@ -28,5 +25,5 @@ jobs:
               uses: CodSpeedHQ/action@v4
               with:
                   mode: instrumentation
-                  run: npm exec vitest bench --run --shard=${{ matrix.shard }}
+                  run: npm exec vitest bench
                   token: ${{ secrets.CODSPEED_TOKEN }} # optional for public repos
