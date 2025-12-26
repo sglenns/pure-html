@@ -1,11 +1,11 @@
-@import "../../node_modules/simpledotcss/simple.css";
-@import "./popover.css";
-@import "./skip-link.css";
+@layer base, theme, componet, utility;
 
-/*
-body:has(dialog[open]) {
-  padding-right: 1rem;
-  overflow-y: hidden;
-  scrollbar-gutter: stable;
+@import "./base.css";
+@import "./component.css";
+@import "./theme.css";
+@import "./utility.css";
+
+:root {
+  --base-space: 1rem;
+  --base-color: oklch(0.081 0 0)
 }
-*/
