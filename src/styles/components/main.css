@@ -1,0 +1,7 @@
+@layer componet {
+  html > {
+    main {
+      padding: var(--base-space);
+    }
+  }
+}

@@ -1,6 +1,6 @@
 @layer base {
-    html {
-        color: var(--base-color);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+  html {
+    color: var(--base-color);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
 }

@@ -7,5 +7,5 @@
 
 :root {
   --base-space: 1rem;
-  --base-color: oklch(0.081 0 0)
+  --base-color: oklch(0.081 0 0);
 }
