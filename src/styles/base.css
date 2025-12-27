@@ -1,6 +1,68 @@
 @layer base {
+  * {
+    scroll-behavior: smooth;
+  }
   html {
-    color: var(--base-color);
+    margin: 0;
+    background-color: light-dark(var(--base-bg), var(--base-color));
+    padding: 0;
+    color: light-dark(var(--base-color), var(--base-bg));
+    color-scheme: light dark;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    grid-template-columns: max-content repeat(2, 1fr);
+    grid-template-areas:
+      "header header header"
+      "aside content content"
+      "footer footer footer";
+    gap: var(--base-space);
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+  }
+  header,
+  main,
+  aside,
+  footer {
+    padding: var(--base-space);
+  }
+
+  header {
+    display: flex;
+    grid-area: header;
+    align-items: center;
+    gap: var(--base-space);
+    border-block-end: calc(var(--base-space) / 16) solid currentColor;
+  }
+
+  main {
+    grid-area: content;
+    overflow: auto;
+  }
+
+  aside {
+    grid-area: aside;
+    border-inline-end: calc(var(--base-space) / 16) solid currentColor;
+    overflow: auto;
+  }
+
+  footer {
+    grid-area: footer;
+    border-block-start: calc(var(--base-space) / 16) solid currentColor;
+  }
+
+  button {
+    padding: calc(var(--base-space) / 2) var(--base-space);
+  }
+
+  h1 {
+    border-block-end: calc(var(--base-space) / 8) solid currentColor;
+  }
+  h2 {
+    border-block-end: calc(var(--base-space) / 16) dashed currentColor;
   }
 }

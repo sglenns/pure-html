@@ -1,11 +1,16 @@
-@layer base, theme, componet, utility;
+@layer base, componet;
 
 @import "./base.css";
-@import "./component.css";
-@import "./theme.css";
-@import "./utility.css";
 
 :root {
   --base-space: 1rem;
-  --base-color: oklch(0.081 0 0);
+  --base-color: oklch(0.16 0 90);
+  --base-bg: oklch(0.97 0 90);
+
+  --base-primary: oklch(0.62 0.188 260);
+  --base-secondary: oklch(0.58 0.212 292);
+  --base-info: oklch(0.85 0.134 203);
+  --base-success: oklch(0.85 0.264 143);
+  --base-warning: oklch(0.89 0.183 96);
+  --base-error: oklch(0.63 0.254 21);
 }

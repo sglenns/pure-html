@@ -6,7 +6,6 @@ for (const dialog of dialogs) {
   }
   const showButton = dialog.previousElementSibling;
   const closeButton = dialog.querySelector("button");
-  console.log({ showButton, closeButton });
   showButton.addEventListener("click", () => {
     dialog.showModal();
   });

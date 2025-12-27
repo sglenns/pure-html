@@ -1,7 +1,0 @@
-@layer componet {
-  html > {
-    footer {
-      padding: var(--base-space);
-    }
-  }
-}
