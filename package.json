@@ -33,6 +33,6 @@
     "vitest": "4.0.16"
   },
   "dependencies": {
-    "@fontsource/roboto": "^5.2.9"
+    "@fontsource-variable/roboto": "^5.2.9"
   }
 }

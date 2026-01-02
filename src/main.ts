@@ -1,4 +1,4 @@
-import "@fontsource/roboto";
+import "@fontsource-variable/roboto";
 
 import "@/scripts/dialog";
 
