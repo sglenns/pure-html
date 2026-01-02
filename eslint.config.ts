@@ -28,11 +28,6 @@ export default defineConfig([
     plugins: { "@html-eslint": html },
     languageOptions: {
       parser: htmlParser,
-      parserOptions: {
-        templateEngineSyntax: {
-          "{{": "}}",
-        },
-      },
     },
     rules: {
       "@html-eslint/use-baseline": ["warn", { available: "widely" }],
