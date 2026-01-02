@@ -3,9 +3,12 @@
 @import "./base.css";
 
 :root {
-  --base-space: 1rem;
-  --base-color: oklch(0.16 0 90);
-  --base-bg: oklch(0.97 0 90);
+  --base-size: 1rem;
+  --body-font: "Roboto", sans-serif;
+  --body-line-height: 1.5;
+  --body-letter-spacing: normal;
+  --body-color: oklch(0.16 0 90);
+  --body-background: oklch(0.97 0 90);
 
   --base-primary: oklch(0.62 0.188 260);
   --base-secondary: oklch(0.58 0.212 292);
