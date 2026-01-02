@@ -4,7 +4,7 @@
 
 :root {
   --base-size: 1rem;
-  --body-font: "Roboto", sans-serif;
+  --body-font: "Roboto Variable", sans-serif;
   --body-line-height: 1.5;
   --body-letter-spacing: normal;
   --body-color: oklch(0.16 0 90);
