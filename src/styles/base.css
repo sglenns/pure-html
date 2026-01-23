@@ -35,6 +35,17 @@
     letter-spacing: var(--body-letter-spacing);
   }
 
+  @supports (position-area: end) {
+    [popover] {
+      position-area: end span-end;
+      position-try-fallbacks:
+        flip-block,
+        flip-inline,
+        flip-block flip-inline;
+      margin: 0;
+    }
+  }
+
   /* main */
   header,
   main,
