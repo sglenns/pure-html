@@ -13,55 +13,55 @@ importers:
         version: 5.2.10
     devDependencies:
       '@eslint/css':
-        specifier: 1.0.0
+        specifier: ^1.0.0
         version: 1.0.0
       '@eslint/js':
-        specifier: 10.0.1
+        specifier: ^10.0.1
         version: 10.0.1(eslint@10.0.3(jiti@2.6.1))
       '@eslint/markdown':
-        specifier: 7.5.1
+        specifier: ^7.5.1
         version: 7.5.1
       '@html-eslint/eslint-plugin':
-        specifier: 0.58.1
+        specifier: ^0.58.1
         version: 0.58.1(eslint@10.0.3(jiti@2.6.1))
       '@html-eslint/parser':
-        specifier: 0.58.1
+        specifier: ^0.58.1
         version: 0.58.1
       '@types/node':
-        specifier: 24.12.0
+        specifier: ^24.12.0
         version: 24.12.0
       '@typescript-eslint/eslint-plugin':
-        specifier: 8.57.0
+        specifier: ^8.57.0
         version: 8.57.0(@typescript-eslint/parser@8.57.0(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3)
       eslint:
-        specifier: 10.0.3
+        specifier: ^10.0.3
         version: 10.0.3(jiti@2.6.1)
       eslint-config-prettier:
-        specifier: 10.1.8
+        specifier: ^10.1.8
         version: 10.1.8(eslint@10.0.3(jiti@2.6.1))
       globals:
-        specifier: 17.4.0
+        specifier: ^17.4.0
         version: 17.4.0
       jiti:
-        specifier: 2.6.1
+        specifier: ^2.6.1
         version: 2.6.1
       prettier:
-        specifier: 3.8.1
+        specifier: ^3.8.1
         version: 3.8.1
       prettier-plugin-css-order:
-        specifier: 2.2.0
+        specifier: ^2.2.0
         version: 2.2.0(postcss@8.5.8)(prettier@3.8.1)
       typescript:
-        specifier: 5.9.3
+        specifier: ^5.9.3
         version: 5.9.3
       typescript-eslint:
-        specifier: 8.57.0
+        specifier: ^8.57.0
         version: 8.57.0(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3)
       vite:
-        specifier: '8'
+        specifier: ^8.0.0
         version: 8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)
       vitest:
-        specifier: 4.1.0
+        specifier: ^4.1.0
         version: 4.1.0(@types/node@24.12.0)(vite@8.0.0(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1))
 
 packages:
