@@ -1,4 +1,4 @@
-import { bench, describe } from "vitest";
+import { bench, describe } from "vite-plus/test";
 
 function fibonacci(n: number): number {
   if (n < 2) {
