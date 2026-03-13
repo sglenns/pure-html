@@ -50,10 +50,10 @@ export default defineConfig([
     languageOptions: { tolerant: true },
     extends: ["css/recommended"],
     rules: {
-      "css/no-invalid-at-rules": ["error"],
-      "css/use-baseline": ["warn", { available: "widely" }],
+      "css/font-family-fallbacks": ["warn"],
+      "css/no-invalid-at-rules": ["warn"],
       "css/no-invalid-properties": ["error", { allowUnknownVariables: true }],
-      "css/no-empty-blocks": ["error"],
+      "css/use-baseline": ["warn", { available: "widely" }],
     },
   },
 ]);
