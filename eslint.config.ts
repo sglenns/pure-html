@@ -12,6 +12,7 @@ export default defineConfig([
   globalIgnores(["dist/**/*", "node_modules/**/*"]),
   eslintConfigPrettier,
   tseslint.configs.recommended,
+
   {
     files: ["**/*.md"],
     plugins: { markdown },
@@ -23,14 +24,14 @@ export default defineConfig([
   },
 
   {
-    ...html.configs?.["flat/recommended"],
     files: ["**/*.html"],
-    plugins: { "@html-eslint": html },
+    plugins: { html },
+    extends: ["html/recommended"],
     languageOptions: {
       parser: htmlParser,
     },
     rules: {
-      "@html-eslint/use-baseline": ["warn", { available: "widely" }],
+      "html/use-baseline": ["warn", { available: "widely" }],
     },
   },
 
