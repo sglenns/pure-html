@@ -17,3 +17,9 @@
   --base-warning: oklch(0.89 0.183 96);
   --base-error: oklch(0.63 0.254 21);
 }
+
+#bg-image-figure {
+  background-image: url("https://placehold.co/300x300/EEE/31343C");
+  width: 300px;
+  height: 300px;
+}
