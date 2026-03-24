@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "rootDir": "./src",
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
@@ -21,7 +25,6 @@
     "moduleDetection": "force",
     "noEmit": true,
     /* Linting */
-    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
