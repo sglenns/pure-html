@@ -12,6 +12,7 @@ export default defineConfig([
   globalIgnores(["dist/**/*", "node_modules/**/*"]),
   eslintConfigPrettier,
   tseslint.configs.recommended,
+
   {
     files: ["**/*.md"],
     plugins: { markdown },
@@ -23,14 +24,15 @@ export default defineConfig([
   },
 
   {
-    ...html.configs?.["flat/recommended"],
     files: ["**/*.html"],
-    plugins: { "@html-eslint": html },
+    plugins: { html },
+    extends: ["html/recommended"],
     languageOptions: {
       parser: htmlParser,
     },
     rules: {
-      "@html-eslint/use-baseline": ["warn", { available: "widely" }],
+      "html/use-baseline": ["warn", { available: "widely" }],
+      "html/no-multiple-h1": ["warn"],
     },
   },
 
@@ -48,10 +50,10 @@ export default defineConfig([
     languageOptions: { tolerant: true },
     extends: ["css/recommended"],
     rules: {
-      "css/no-invalid-at-rules": ["error"],
-      "css/use-baseline": ["warn", { available: "widely" }],
+      "css/font-family-fallbacks": ["warn"],
+      "css/no-invalid-at-rules": ["warn"],
       "css/no-invalid-properties": ["error", { allowUnknownVariables: true }],
-      "css/no-empty-blocks": ["error"],
+      "css/use-baseline": ["warn", { available: "widely" }],
     },
   },
 ]);
